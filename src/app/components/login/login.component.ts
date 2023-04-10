@@ -29,6 +29,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSumit() {
+    if (this.loginFormModel.senha != this.loginFormModel.confirmaSenha) {
+      window.alert("Senha não confere!")
+    }
+    else {
+      window.alert("Ok !!!")
+    }
     console.log('loginFormModel: ', this.loginFormModel);
   }
 }
